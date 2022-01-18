@@ -1,0 +1,31 @@
+<form [formGroup]="form">
+  <h1 mat-dialog-title>Introduzca sus datos:</h1>
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-label>Nombre</mat-label>
+    <input
+      matInput
+      placeholder="Ejemplo: Harry Potter"
+      formControlName="name"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-label>Patronus</mat-label>
+    <input
+      matInput
+      placeholder="Ejemplo: Harry Potter"
+      formControlName="patronus"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-label>Fecha de nacimiento</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="dateOfBirth">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>  
+  <div mat-dialog-actions>
+    <button mat-raised-button (click)="onNoClick()">Cerrar</button>
+    <button mat-raised-button color="primary" [mat-dialog-close]="this.form.value" cdkFocusInitial>Ok</button>
+  </div>
+</form>

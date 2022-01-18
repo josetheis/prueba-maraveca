@@ -1,0 +1,6 @@
+<div class="mat-headline">Personajes</div>
+<app-house-select (onHouseChange)="onHouseChange($event)"></app-house-select>
+<app-wizard-table
+  *ngIf="characters?.length"
+  [data]="characters"
+></app-wizard-table>
