@@ -7,7 +7,7 @@ import { calculateAge } from 'src/app/shared/util/calculateAge';
   providedIn: 'root',
 })
 export class GetCharactersByHouseService {
-  private url = 'http://hp-api.herokuapp.com/api/characters/house/';
+  private url = 'https://hp-api.herokuapp.com/api/characters/house/';
 
   constructor(private http: HttpClient) {}
 

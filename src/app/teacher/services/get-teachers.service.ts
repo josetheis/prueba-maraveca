@@ -12,7 +12,7 @@ interface wizard {
   providedIn: 'root',
 })
 export class GetTeachersService {
-  private url = 'http://hp-api.herokuapp.com/api/characters/staff';
+  private url = 'https://hp-api.herokuapp.com/api/characters/staff';
 
   constructor(private http: HttpClient) {}
 

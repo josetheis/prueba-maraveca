@@ -11,7 +11,7 @@ export class GetStudentsService {
   constructor(private http: HttpClient) { }
 
   get() {
-    return this.http.get('http://hp-api.herokuapp.com/api/characters/students').pipe(
+    return this.http.get('https://hp-api.herokuapp.com/api/characters/students').pipe(
       map((data: any) =>
         data.map(({ name, patronus, dateOfBirth, image }: any) => ({
           name,
